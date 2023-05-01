@@ -17,7 +17,7 @@ const Nav = () => {
       
       </ul>
     </div>
-    <Link className="btn btn-ghost normal-case text-xl" to='/'> <span className='text-red-400 '>Rest </span> 🍌2 <span className='text-blue-500 ml-1'>Rent</span> </Link>
+    <Link className="btn btn-ghost normal-case font-bold text-2xl" to='/'> <span className='text-red-400 '>Rest </span> 🍌2 <span className='text-blue-500 ml-1'>Rent</span> </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
