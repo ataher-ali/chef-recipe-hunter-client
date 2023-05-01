@@ -12,6 +12,7 @@ import Blog from './Pages/Blog/Blog.jsx';
 import Login from './Pages/Account/Login.jsx';
 import Register from './Pages/Account/Register.jsx';
 import Error from './Pages/Error/Error.jsx';
+import Profile from './Pages/Account/Profile/Profile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path:'/blog',
         element: <Blog></Blog>
+      },
+      {
+        path:'/profile',
+        element: <Profile></Profile>
       },
       {
         path:'/login',
