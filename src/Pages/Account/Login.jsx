@@ -1,6 +1,7 @@
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const Login = () => {
 
     const formData =(event)=>{
@@ -48,6 +49,8 @@ const Login = () => {
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
                   </a>
+
+                  <Link to='/register' className="label-text-alt link link-hover">Register</Link>
                 </label>
               </div>
               <div className="form-control mt-0">
