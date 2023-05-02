@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
+import Main from "./Layouts/Main";
+import Foods from "./Layouts/Foods/Foods";
 
 const Home = () => {
-    return (
-        <div>
-            home page...
-        </div>
-    );
+  return (
+    <>
+      <Main></Main>
+      <div className='mx-28 px-2 '>
+        <Foods></Foods>
+      </div>
+    </>
+  );
 };
 
 export default Home;

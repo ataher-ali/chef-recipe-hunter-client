@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
+
+  const { user ,createUserWithPass , signInWithGoogle,signInWithGithub} = useContext(AuthContext);
 
     const formData =(event)=>{
         event.preventDefault(); 
@@ -13,6 +16,7 @@ const Login = () => {
 
         event.target.reset();
     }
+
 
 
   return (
@@ -61,10 +65,10 @@ const Login = () => {
             </form>
 
               <div className="flex justify-center mt-2 p-5">
-                <button className="bg-gray-100 hover:bg-gray-300  p-1 rounded-full mx-2">
+                <button onClick={signInWithGoogle} className="bg-gray-100 hover:bg-gray-300  p-1 rounded-full mx-2">
                   <FcGoogle size={40}></FcGoogle>
                 </button>
-                <button className=" bg-gray-100 p-1 rounded-full hover:bg-gray-300 mx-2">
+                <button onClick={signInWithGithub} className=" bg-gray-100 p-1 rounded-full hover:bg-gray-300 mx-2">
                   <AiFillGithub size={40}></AiFillGithub>
                 </button>
               </div>

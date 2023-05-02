@@ -9,9 +9,7 @@ const App = () => {
   return (
     <>
       <Header></Header>
-      <div className='mx-28 px-2 '>
          <Outlet></Outlet>
-      </div>
       <Footer></Footer>
     </>
   );

@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-  // const { user } = useContext(AuthContext);
+  const { user ,createUserWithPass , signInWithGoogle,signInWithGithub} = useContext(AuthContext);
 
-  // console.log(user);
+  console.log(user);
 
   const formData = (event) => {
     event.preventDefault();
@@ -19,23 +19,13 @@ const Register = () => {
     console.log("email :", email);
     console.log("password :", password);
     console.log("Photo URL :", PhotoURL);
-
-    // createUserWithPass(email,password,name,PhotoURL)
-
+    
+    createUserWithPass ()
     event.target.reset();
   };
 
 
-  //Sign In With Google
-  const signInWithGoogle = ()=>{
-      console.log('google');
-  }
 
-  //Sign In With Github
-  const signInWithGithub = ()=>{
-    console.log('github');
-
-  }
 
 
   return (
