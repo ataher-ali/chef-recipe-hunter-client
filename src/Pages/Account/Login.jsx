@@ -18,10 +18,11 @@ const Login = () => {
   return (
     <>
       <div className="my-5 ">
+          <h2 className="text-2xl text-center text-bold">Login</h2>
         <div className="hero-content w-full">
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-xl ">
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-xl border">
             
-            <form onSubmit={formData} className="card-body">
+            <form onSubmit={formData} className="mx-10 mt-5 ">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -56,8 +57,10 @@ const Login = () => {
               <div className="form-control mt-0">
                 <button className="btn btn-primary">Login</button>
               </div>
+              
+            </form>
 
-              <div className="flex justify-center mt-2">
+              <div className="flex justify-center mt-2 p-5">
                 <button className="bg-gray-100 hover:bg-gray-300  p-1 rounded-full mx-2">
                   <FcGoogle size={40}></FcGoogle>
                 </button>
@@ -65,7 +68,7 @@ const Login = () => {
                   <AiFillGithub size={40}></AiFillGithub>
                 </button>
               </div>
-            </form>
+
           </div>
         </div>
       </div>
