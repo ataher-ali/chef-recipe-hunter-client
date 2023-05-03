@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Nav = () => {
 
   const { user,logOut } = useContext(AuthContext);
-console.log(user);
+
     return (
         <>
             <div className="navbar bg-base-100">
@@ -37,12 +37,7 @@ console.log(user);
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-        {
-            user?
-            <img src="..." />
-            :
-            <img src={user.photoURL} />
-        }
+        <img src='https://cdn-icons-png.flaticon.com/512/4086/4086679.png' alt="" />
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">

@@ -1,14 +1,20 @@
 import React from "react";
 import Main from "./Layouts/Main";
-import Foods from "./Layouts/Foods/Foods";
+import Section_Chefs from "./Layouts/Chefs/Section_Chefs";
 
 const Home = () => {
+
+    
   return (
     <>
       <Main></Main>
-      <div className='mx-28 px-2 '>
-        <Foods></Foods>
-      </div>
+    
+    <div>
+    </div>
+    <Section_Chefs></Section_Chefs>
+
+    
+       
     </>
   );
 };

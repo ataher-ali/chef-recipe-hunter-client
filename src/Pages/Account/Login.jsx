@@ -23,7 +23,7 @@ const Login = () => {
     <>
       <div className="my-5 ">
           <h2 className="text-2xl text-center text-bold">Login</h2>
-        <div className="hero-content w-full">
+        <div className="flex justify-center mt-4">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-xl border">
             
             <form onSubmit={formData} className="mx-10 mt-5 ">

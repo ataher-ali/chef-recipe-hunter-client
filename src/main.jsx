@@ -14,6 +14,8 @@ import Register from './Pages/Account/Register.jsx';
 import Error from './Pages/Error/Error.jsx';
 import Profile from './Pages/Account/Profile/Profile.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
+import Chef_details from './Pages/Home/Layouts/Chefs/Chef_details.jsx';
+import Foods from './Pages/Home/Layouts/Foods/Foods.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +24,8 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        
       },
       {
         path:'/*',
@@ -35,6 +38,16 @@ const router = createBrowserRouter([
       {
         path:'/blog',
         element: <Blog></Blog>
+      },
+      {
+        path:'/Chef_Details/:id',
+        element: <Chef_details></Chef_details>,
+        loader:({params})=>fetch(`http://localhost:1010/chefs/${params.id}`)
+        
+      },
+      {
+        path:'/foods',
+        element: <Foods></Foods>
       },
       {
         path:'/profile',
