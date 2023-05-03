@@ -1,13 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Nav from '../../Components/Header/Nav';
 
 const Main = () => {
     return (
         <>
-            <div
+        
+            <div 
         className="hero min-h-screen"
         style={{
           backgroundImage: `url("https://images.pexels.com/photos/1310777/pexels-photo-1310777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
+          top:'0px',
+          zIndex: '-1'
+          
         }}
       >
         <div className="hero-overlay bg-opacity-80"></div>

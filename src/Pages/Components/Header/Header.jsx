@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <>
-            <div className="lg:mx-24 mt-2">
+            <div className="lg:mx-24 my-2 ">
 
             <Nav></Nav>
 

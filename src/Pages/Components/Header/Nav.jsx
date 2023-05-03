@@ -8,7 +8,7 @@ const Nav = () => {
 
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-300 rounded-xl">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -38,7 +38,7 @@ const Nav = () => {
     user? 
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
+        <div className="w-10 rounded-full bg-slate-400  ">
         <img src='https://cdn-icons-png.flaticon.com/512/4086/4086679.png' alt="" />
         </div>
       </label>
