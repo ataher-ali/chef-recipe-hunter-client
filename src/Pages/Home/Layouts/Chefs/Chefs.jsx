@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Chefs = (props) => {
-    const {name,picture,_id}=props.element
+    const {name,picture,_id,likes,food_region}=props.element
     console.log(_id);
     return (
         <>
@@ -17,7 +17,11 @@ const Chefs = (props) => {
         <div className="card-body">
 
           <div className="card-actions justify-around items-center">
+          <span>
           <h2 className="card-title">{name}</h2>
+          <p className='text-xl'>🍳 {food_region}</p>
+          <p className='text-xl'>💙 {likes}</p>
+          </span>
             <Link to={`/Chef_Details/${_id}`} >
             <button className="btn btn-outline">Details </button>
 

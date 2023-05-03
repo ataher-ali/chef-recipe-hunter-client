@@ -16,8 +16,9 @@ const Chef_details = () => {
                 <h1 className='text-center text-5xl text-bold m-3'>{data.name}</h1>
                 <div className='lg:mx-40 my-10'>
                     
-                <h1 className='text-center text-xl text-bold m-3'> <span className='text-red-400'> Experience  : </span>  {data.experience_year} / Year</h1>
-                <h1 className='text-center text-xl text-bold m-3'> <span className='text-red-400'>Chef From : </span>  {data.food_region}</h1>
+                <h1 className='text-center text-xl text-bold m-3'> <span className='text-red-400'> 💼 Experience  : </span>  {data.experience_year} / Year</h1>
+                <h1 className='text-center text-xl text-bold m-3'> <span className='text-red-400'>🍳 Recipe From : </span>  {data.food_region}</h1>
+                <h1 className='text-center text-xl text-bold m-3'> <span className='text-red-400'>💙 Total Like : </span>  {data.likes}</h1>
 
   
   <div className='flex justify-center '>

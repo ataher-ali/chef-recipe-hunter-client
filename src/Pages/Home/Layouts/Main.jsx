@@ -19,8 +19,8 @@ const Main = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <Link to='/chefs'>
-            <button className="btn btn-primary">Meet Our Chefs</button> 
+            <Link to='/foods'>
+            <button className="btn btn-outline bg-cyan-100 ">Meet Our F<span>🍩🍔</span>D's</button> 
             </Link>
           </div>
         </div>
