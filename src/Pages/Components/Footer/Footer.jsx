@@ -8,7 +8,7 @@ const Footer = () => {
 
 
 <footer className="p-5 px-20 bg-base-300 text-base-content ">
-  <div className='footer  lg:mx-20 '>
+  <div className='footer  lg:mx-10 '>
 
   
   <div>
@@ -61,8 +61,8 @@ const Footer = () => {
     </div>
   </div>
   </div>
-  <div className=' mt-5 lg:px-10 lg:mx-2 px-3 rounded-md   border-t bg-base-200 text-base-content border-base-300'>
-    <p className='text-center flex items-center '> Copyright © 2023 - All right reserved by <Link to='/' className=' p-1 font-bold text-lg  rounded'> <span className='text-red-400 '>Rest </span> 🍌2 <span className='text-blue-500 ml-1'>Rent</span> </Link></p>
+  <div className=' mt-5 lg:px-10 lg:mx-2 py-2 rounded-md   border-t bg-base-200 text-base-content border-base-300'>
+    <p className='text-center  '> Copyright © 2023 - All right reserved by <Link to='/' className=' p-1 font-bold text-lg  rounded'> <span className='text-red-400 '>Rest </span> 🍌2 <span className='text-blue-500 ml-1'>Rent</span> </Link></p>
   
   
   </div>

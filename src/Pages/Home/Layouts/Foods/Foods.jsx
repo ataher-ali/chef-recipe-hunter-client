@@ -5,7 +5,7 @@ import Food_Cart_2 from './Food_Cart_2';
 
 const Foods = () => {
     const foods = useLoaderData()
-    console.log(foods);
+    // console.log(foods);
     return (
         <div>
             <div className='lg:mx-40 my-10 mx-10'>
@@ -15,7 +15,7 @@ const Foods = () => {
               
             <div className='lg:grid lg:grid-cols-3 gap-4 '>
             {
-                foods.map(food=> <Food_Cart_2 element={food} ></Food_Cart_2> )
+                foods.map(food=> <Food_Cart_2 key={food.id} element={food} ></Food_Cart_2> )
             }
             </div>
 
