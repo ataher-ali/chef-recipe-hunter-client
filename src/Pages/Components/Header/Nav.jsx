@@ -27,6 +27,8 @@ const Nav = () => {
     <ul className="menu menu-horizontal px-1">
       <li> <NavLink to='/'>Home</NavLink> </li>
       <li> <NavLink to='/about'>About</NavLink> </li>
+      <li> <NavLink to='/foods'>Foods</NavLink> </li>
+      <li> <NavLink to='/Chefs'>Chefs</NavLink> </li>
       <li> <NavLink to='/blog'>Blog</NavLink> </li>
       
     </ul>

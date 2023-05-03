@@ -16,8 +16,8 @@ const Section_Chefs = () => {
         <>
             <div className='mx-28 px-2 '>
 
-            <h1 className='text-center text-5xl text-bold my-5'>Our Chefs</h1>
-            <h2 className='text-center'> Total {data.length} country's chefs we have  </h2>
+            <h1 className='text-center text-5xl text-bold my-5'> 🍩ur Chefs </h1>
+            <h2 className='text-center mb-5'> Total {data.length} country's chefs we have  </h2>
                 
                 <div className='grid grid-cols-3 gap-4'>
                 {

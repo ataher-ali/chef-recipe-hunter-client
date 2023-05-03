@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Chefs = (props) => {
     const {name,picture,_id,likes,food_region}=props.element
-    console.log(_id);
+    // console.log(_id);
     return (
         <>
             

@@ -52,7 +52,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/foods',
-        element: <Foods></Foods>
+        element: <Foods></Foods>,
+        loader:({params})=>fetch(`http://localhost:1010/foods/`)
       },
       {
         path:'/profile',
