@@ -18,16 +18,17 @@ const Footer = () => {
         <Link className="link link-hover" to='/foods'>Foods</Link> 
         <Link className="link link-hover" to='/chefs'>Chefs</Link> 
         <Link className="link link-hover" to='/blog'>Blog</Link> 
+        <Link className="link link-hover" to='/'>Career</Link> 
   </div> 
   <div>
     <span className="footer-title"> Available </span> 
-      <p className=''><span className=''>9.30 AM - 12.00 AM </span> (Saturday)</p>
-      <p className=''><span className=''>9.30 AM - 12.00 AM </span> (Sunday)</p>
-      <p className=''><span className=''>9.30 AM - 12.00 AM </span> (Monday)</p>
-      <p className=''><span className=''>9.30 AM - 12.00 AM </span> (Tuesday)</p>
-      <p className=''><span className=''>9.30 AM - 12.00 AM </span> (Wednesday)</p>
-      <p className=''><span className=''>9.30 AM - 12.00 AM </span> (Thursday)</p>
-      <p className=''><span className=''>3.00 PM - 12.00 AM </span> (Friday) </p>
+      <p className='text-xs'><span className=''>9.30 AM - 12.00 AM </span> (Saturday)</p>
+      <p className='text-xs'><span className=''>9.30 AM - 12.00 AM </span> (Sunday)</p>
+      <p className='text-xs'><span className=''>9.30 AM - 12.00 AM </span> (Monday)</p>
+      <p className='text-xs'><span className=''>9.30 AM - 12.00 AM </span> (Tuesday)</p>
+      <p className='text-xs'><span className=''>9.30 AM - 12.00 AM </span> (Wednesday)</p>
+      <p className='text-xs'><span className=''>9.30 AM - 12.00 AM </span> (Thursday)</p>
+      <p className='text-xs'><span className=''>3.00 PM - 12.00 AM </span> (Friday) </p>
   </div> 
   <div>
   <span className="footer-title"> Address </span>
@@ -38,11 +39,19 @@ const Footer = () => {
                 <p> Dotto Super Market, MS School Gate </p>
                 <p>Ulipur, Kurigram</p>
               </div>
-         
-         
-        
-         
   </div>
+  <div>
+  <span className="footer-title"> Contact </span>
+        
+      <p>help@example.com</p>
+      <p>support@example.com</p>
+      <p>career@example.com</p>
+      <p>1628</p>
+      <p>+880-17xxxxxxx</p>
+        
+              
+  </div>
+  
   <div>
     <span className="footer-title">Social</span> 
     <div className="grid grid-flow-col gap-4">
@@ -52,8 +61,8 @@ const Footer = () => {
     </div>
   </div>
   </div>
-  <div className=' mt-5 lg:px-10 lg:mx-10  rounded-md  py-4 border-t bg-base-200 text-base-content border-base-300'>
-    <p className='text-center flex items-center '> <span>Copyright © 2023 - All right reserved by</span> <Link to='/' className=' p-1 font-bold text-lg  rounded'> <span className='text-red-400 '>Rest </span> 🍌2 <span className='text-blue-500 ml-1'>Rent</span> </Link></p>
+  <div className=' mt-5 lg:px-10 lg:mx-2 px-3 rounded-md   border-t bg-base-200 text-base-content border-base-300'>
+    <p className='text-center flex items-center '> Copyright © 2023 - All right reserved by <Link to='/' className=' p-1 font-bold text-lg  rounded'> <span className='text-red-400 '>Rest </span> 🍌2 <span className='text-blue-500 ml-1'>Rent</span> </Link></p>
   
   
   </div>

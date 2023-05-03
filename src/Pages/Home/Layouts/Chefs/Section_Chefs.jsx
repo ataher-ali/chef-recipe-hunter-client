@@ -6,7 +6,7 @@ const Section_Chefs = () => {
         const [data, setData] = useState([]);
 
         useEffect(() => {
-          fetch('http://localhost:1010/chefs')
+          fetch('https://a10-server-puce.vercel.app/chefs')
             .then(response => response.json())
             .then(data => setData(data.slice(0,6)))
             .catch(error => console.error(error));

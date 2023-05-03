@@ -9,7 +9,7 @@ const About = () => {
   <div className="lg:flex lg:flex-row gap-3 items-center mx-10">
     <img  src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" className="max-w-sm rounded-lg shadow-2xl" />
     <div className='ml-10'>
-      <h1 className="text-5xl font-bold my-5">A Culinary Journey at our International Restaurant</h1>
+      <h1 className="text-5xl font-bold my-5">A Culinary Journey at  Our International Restaurant 🍹</h1>
       <p className="py-6">
       Welcome to our international restaurant, where we take you on a culinary journey around the world! From the vibrant and spicy flavors of Mexico to the rich and savory tastes of Italy, our menu is a celebration of global cuisine.
 <br /> <br />

@@ -8,12 +8,12 @@ const Foods = () => {
     console.log(foods);
     return (
         <div>
-            <div className='lg:mx-40 my-10 '>
+            <div className='lg:mx-40 my-10 mx-10'>
                 
             <h1 className='text-center text-5xl font-bold my-5' >F<span>🍩🍔</span>D's</h1>
             <h2 className='text-center mb-5'> We Total {foods.length} Items Food </h2>
               
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='lg:grid lg:grid-cols-3 gap-4 '>
             {
                 foods.map(food=> <Food_Cart_2 element={food} ></Food_Cart_2> )
             }

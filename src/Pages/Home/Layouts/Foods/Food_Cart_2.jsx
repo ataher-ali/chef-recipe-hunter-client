@@ -3,7 +3,7 @@ import React from "react";
 const Food_Cart_2 = (params) => {
     const { title, image,details } = params.element;
   return (
-    <div>
+    <div className=" py-5">
       <div className="card card-compact w-96 bg-base-100 shadow-xl h-96">
         <figure className="h-52">
           <img className="fit"

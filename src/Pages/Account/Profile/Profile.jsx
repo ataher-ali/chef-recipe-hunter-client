@@ -3,21 +3,23 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
-    const { user,logOut } = useContext(AuthContext);
+    const { user,logOut ,photoURL } = useContext(AuthContext);
 
+    const {email,displayName}=user
     let navigate = useNavigate();
 
-
+console.log(user);
 
     return (
         <div>
             <div className='lg:mx-40 flex justify-center'>
                 <div>
                 <div className='flex justify-center'>
-                    <img className=' border shadow p-1 rounded-full' src='..' alt="" />
+                    <img className=' border shadow p-1 rounded-full' src={photoURL} alt="" />
                 </div>
-                <h2 className='text-xl font-bold text-center mt-2'> {user.displayName} </h2> 
-                <h2 className='text-xl font-bold text-center mt-2'>  {user.email} </h2> 
+                <p>{photoURL}</p>
+                <h2 className='text-xl font-bold text-center mt-2'> {displayName} </h2> 
+                <h2 className='text-xl font-bold text-center mt-2'>  {email} </h2> 
 
 
                 <div className='flex justify-center'>

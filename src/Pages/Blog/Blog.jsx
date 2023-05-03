@@ -5,7 +5,7 @@ const Blog = () => {
     const [data, setData] = useState([]);
 
         useEffect(() => {
-          fetch('http://localhost:1010/blogs')
+          fetch('https://a10-server-puce.vercel.app/blogs')
             .then(response => response.json())
             .then(data => setData(data)) //.slice(0,6)
             .catch(error => console.error(error));

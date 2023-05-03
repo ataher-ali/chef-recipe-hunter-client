@@ -8,7 +8,7 @@ const Nav = () => {
 
     return (
         <>
-            <div className="navbar bg-base-300 rounded-xl">
+            <div className="navbar bg-base-200  ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -17,11 +17,13 @@ const Nav = () => {
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
       <li> <NavLink to='/'>Home</NavLink> </li>
       <li> <NavLink to='/about'>About</NavLink> </li>
+      <li> <NavLink to='/foods'>Foods</NavLink> </li>
+      <li> <NavLink to='/Chefs'>Chefs</NavLink> </li>
       <li> <NavLink to='/blog'>Blog</NavLink> </li>
       
       </ul>
     </div>
-    <Link className="btn btn-ghost normal-case font-bold text-2xl" to='/'> <span className='text-red-400 '>Rest </span> 🍌2 <span className='text-blue-500 ml-1'>Rent</span> </Link>
+    <Link className="btn btn-ghost hover:bg-white normal-case font-bold text-2xl" to='/'> <span className='text-red-400 '>Rest </span> 🍌2 <span className='text-blue-500 ml-1'>Rent</span> </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -53,7 +55,7 @@ const Nav = () => {
       </ul>
     </div>
     :
-    <Link to='/login' className="btn">Login</Link>
+    <Link to='/login' className="btn btn-outline ">Login</Link>
     }
   </div>
 </div>

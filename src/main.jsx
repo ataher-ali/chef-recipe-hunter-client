@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       {
         path:'/Chef_Details/:id',
         element: <Chef_details></Chef_details>,
-        loader:({params})=>fetch(`http://localhost:1010/chefs/${params.id}`)
+        loader:({params})=>fetch(`https://a10-server-puce.vercel.app/chefs/${params.id}`)
         
       },
       {
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
       {
         path:'/foods',
         element: <Foods></Foods>,
-        loader:({params})=>fetch(`http://localhost:1010/foods/`)
+        loader:({params})=>fetch(`https://a10-server-puce.vercel.app/foods/`)
       },
       {
         path:'/profile',
