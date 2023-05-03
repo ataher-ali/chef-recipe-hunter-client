@@ -16,6 +16,7 @@ import Profile from './Pages/Account/Profile/Profile.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import Chef_details from './Pages/Home/Layouts/Chefs/Chef_details.jsx';
 import Foods from './Pages/Home/Layouts/Foods/Foods.jsx';
+import Section_Chefs from './Pages/Home/Layouts/Chefs/Section_Chefs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         element: <Chef_details></Chef_details>,
         loader:({params})=>fetch(`http://localhost:1010/chefs/${params.id}`)
         
+      },
+      {
+        path:'/Chefs',
+        element: <Section_Chefs></Section_Chefs>
       },
       {
         path:'/foods',
