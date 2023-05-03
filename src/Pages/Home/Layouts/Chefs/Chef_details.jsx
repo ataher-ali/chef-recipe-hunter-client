@@ -1,12 +1,13 @@
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
+import Food_Cart from '../Foods/Food_Cart';
 
 const Chef_details = () => {
     const data = useLoaderData()
     let navigate = useNavigate();
 
     const recipes = data.recipes
-    console.log(data);
+    // console.log(data);
     return (
         <div>
             <div className='flex justify-center'>
@@ -23,14 +24,14 @@ const Chef_details = () => {
   
   <div className='flex justify-center '>
 
-                <div className='bg-red-100 p-5 rounded border  lg:w-fit'>
-                <h2 className='text-2xl font-bold text-center' >F<span>🍩🍔</span>D Recipes </h2>
+                <div className='bg-base-300 p-5 rounded-xl lg:py-10 border  lg:w-fit'>
+                <h2 className='text-4xl font-bold text-center mb-10' >F<span>🍩🍔</span>D Recipes </h2>
                 
-                <ol className='lg:mx-96 grid grid-cols-2 gap-4 mt-2'>
+                <div className='lg:mx-5 grid grid-cols-2 gap-5 mt-2'>
                     {
-                        recipes.map(r=> <li> {r} </li> )
+                        recipes.map(f=> <Food_Cart key={f.id} element={f}></Food_Cart> )
                     }
-                </ol>
+                </div>
                 </div>
   </div>
 
