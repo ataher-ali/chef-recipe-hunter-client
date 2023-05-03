@@ -21,3 +21,7 @@ api/chefs/ 👉 [https://a10-server-puce.vercel.app/chefs](https://a10-server-pu
 
 api/chefs/{id} > for single id chef
 
+### Blogs
+api/chefs/ 👉 [https://a10-server-puce.vercel.app/chefs](https://a10-server-puce.vercel.app/blpgs)
+
+api/blogss/{id} > for single id Blog
