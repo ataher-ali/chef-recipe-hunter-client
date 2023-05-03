@@ -7,14 +7,14 @@ const Footer = () => {
           
 
 
-<footer className="p-10 bg-base-300 text-base-content ">
-  <div className='footer  lg:mx-20'>
+<footer className="p-5 px-20 bg-base-300 text-base-content ">
+  <div className='footer  lg:mx-20 '>
 
   
   <div>
     <span className="footer-title">Pages</span> 
     <Link className="link link-hover" to='/'>Home</Link> 
-        <Link className="link link-hover" to='/about'>About Us</Link> 
+        <Link className="link link-hover" to='/about'>About</Link> 
         <Link className="link link-hover" to='/foods'>Foods</Link> 
         <Link className="link link-hover" to='/chefs'>Chefs</Link> 
         <Link className="link link-hover" to='/blog'>Blog</Link> 
@@ -29,6 +29,20 @@ const Footer = () => {
       <p className=''><span className=''>9.30 AM - 12.00 AM </span> (Thursday)</p>
       <p className=''><span className=''>3.00 PM - 12.00 AM </span> (Friday) </p>
   </div> 
+  <div>
+  <span className="footer-title"> Address </span>
+        
+              <div className=' bg-slate-100 rounded p-4'>
+         <h3 className='my-2 ml-1 font-bold'> Ulipur Branch </h3>
+                <p> 3 Floor,Left side </p>
+                <p> Dotto Super Market, MS School Gate </p>
+                <p>Ulipur, Kurigram</p>
+              </div>
+         
+         
+        
+         
+  </div>
   <div>
     <span className="footer-title">Social</span> 
     <div className="grid grid-flow-col gap-4">
