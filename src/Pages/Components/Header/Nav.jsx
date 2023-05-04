@@ -6,6 +6,7 @@ const Nav = () => {
 
   const { user,logOut } = useContext(AuthContext);
 
+
     return (
         <>
             <div className="navbar   ">
@@ -41,12 +42,20 @@ const Nav = () => {
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full bg-slate-400  ">
-        <img src='https://cdn-icons-png.flaticon.com/512/4086/4086679.png' alt="" />
+        <img src={user.photoURL} alt="" />
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+
         <li>
-            <Link className="justify-between" to='profile'>Profile</Link>
+            <Link className="justify-between bg-slate-200 rounded my-2" to='profile'>
+            <div className=''>
+          {user.displayName}
+          </div>
+            </Link>
+        </li>
+        <li>
+            <Link className="justify-between " to='profile'> Profile </Link>
         </li>
         
         <li>

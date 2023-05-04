@@ -74,7 +74,13 @@ const Register = () => {
           }
   };
 
-
+  const google =()=>{
+    signInWithGoogle()
+    
+  }
+  const github =()=>{
+    signInWithGithub()
+  }
 
 
 
@@ -144,10 +150,10 @@ const Register = () => {
 
             </form>
               <div className="flex justify-center mt-2 p-5">
-                <button onClick={signInWithGoogle} className="bg-gray-100 hover:bg-gray-300  p-1 rounded-full mx-2">
+                <button onClick={google} className="bg-gray-100 hover:bg-gray-300  p-1 rounded-full mx-2">
                   <FcGoogle size={40}></FcGoogle>
                 </button>
-                <button onClick={signInWithGithub} className=" bg-gray-100 p-1 rounded-full hover:bg-gray-300 mx-2">
+                <button onClick={github} className=" bg-gray-100 p-1 rounded-full hover:bg-gray-300 mx-2">
                   <AiFillGithub size={40}></AiFillGithub>
                 </button>
               </div>

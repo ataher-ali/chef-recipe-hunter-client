@@ -28,7 +28,7 @@ const Login = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
-            // navigate(from, { replace: true })
+            navigate(from, { replace: true })
             
             setSuccess('Login successfully');
         })
@@ -41,6 +41,13 @@ const Login = () => {
          event.target.reset();
     }
 
+    const google =()=>{
+      signInWithGoogle()
+      
+    }
+    const github =()=>{
+      signInWithGithub()
+    }
 
 
   return (
@@ -76,7 +83,7 @@ const Login = () => {
                 />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
+                    
                   </a>
 
                   <Link to='/register' className="label-text-alt link link-hover">Register</Link>
@@ -89,10 +96,10 @@ const Login = () => {
             </form>
 
               <div className="flex justify-center mt-2 p-5">
-                <button onClick={signInWithGoogle} className="bg-gray-100 hover:bg-gray-300  p-1 rounded-full mx-2">
+                <button onClick={google} className="bg-gray-100 hover:bg-gray-300  p-1 rounded-full mx-2">
                   <FcGoogle size={40}></FcGoogle>
                 </button>
-                <button onClick={signInWithGithub} className=" bg-gray-100 p-1 rounded-full hover:bg-gray-300 mx-2">
+                <button onClick={github} className=" bg-gray-100 p-1 rounded-full hover:bg-gray-300 mx-2">
                   <AiFillGithub size={40}></AiFillGithub>
                 </button>
               </div>
