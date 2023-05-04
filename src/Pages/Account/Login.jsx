@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  
+ 
 
-  const { signInWithGoogle,signInWithGithub,signIn} = useContext(AuthContext);
+  const {user, signInWithGoogle,signInWithGithub,signIn,logOut} = useContext(AuthContext);
 
 
     const handleLogin =(event)=>{
@@ -42,16 +42,22 @@ const Login = () => {
     }
 
     const google =()=>{
+      logOut()
       signInWithGoogle()
       
     }
     const github =()=>{
+      logOut()
       signInWithGithub()
     }
 
 
   return (
     <>
+
+      {
+        user? <Navigate to='/'></Navigate> : <div>
+
       <div className="my-5 ">
           <h2 className="text-2xl text-center text-bold">Login</h2>
         <div className="flex justify-center mt-4">
@@ -90,7 +96,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-0">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-outline">Login</button>
               </div>
               
             </form>
@@ -112,6 +118,8 @@ const Login = () => {
           </div>
         </div>
       </div>
+        </div>
+      }
     </>
   );
 };

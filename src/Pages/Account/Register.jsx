@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
 import app from "../../Firebase/firebase.init";
@@ -11,7 +11,7 @@ import app from "../../Firebase/firebase.init";
 const auth = getAuth(app);
 
 const Register = () => {
-  const { user , signInWithGoogle,signInWithGithub} = useContext(AuthContext);
+  const {user,signInWithGoogle,signInWithGithub,logOut} = useContext(AuthContext);
   
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -26,11 +26,11 @@ const Register = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    const PhotoURL = event.target.PhotoURL.value;
+    const PURL = event.target.PhotoURL.value;
     console.log("name :", name);
     console.log("email :", email);
     console.log("password :", password);
-    console.log("Photo URL :", PhotoURL);
+    console.log("Photo URL :", PURL);
     
      // validate
      if (!/(?=.*[A-Z])/.test(password)) {
@@ -61,24 +61,28 @@ const Register = () => {
                 setError(error.message);
             })
 
-            const updateUserData = (user, name) => {
-              updateProfile(user, {
-                  displayName: name
-              })
-                  .then(() => {
-                      console.log('user name updated')
-                  })
-                  .catch(error => {
-                      setError(error.message.slice(9));
-                  })
+            const updateUserData = (user, name,PURL) => {
+              updateProfile(auth.currentUser, {
+                displayName: name, photoURL:PURL
+              }).then(() => {
+                // Profile updated!
+                // ...
+              }).catch((error) => {
+                // An error occurred
+                // ...
+              });
           }
+          updateUserData()
+            
   };
 
   const google =()=>{
+    logOut()
     signInWithGoogle()
     
   }
   const github =()=>{
+    logOut()
     signInWithGithub()
   }
 
@@ -86,7 +90,11 @@ const Register = () => {
 
   return (
     <>
-      <div className="my-5 ">
+
+{
+        user? <Navigate to='/'></Navigate> : 
+        <div>
+             <div className="my-5 ">
       <h2 className="text-2xl text-center text-bold">Register</h2>
         <div className="flex justify-center mt-2">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-xl border">
@@ -145,7 +153,7 @@ const Register = () => {
                 </label>
               </div>
               <div className="form-control mt-0">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-outline">Register</button>
               </div>
 
             </form>
@@ -163,7 +171,9 @@ const Register = () => {
               </div>
           </div>
         </div>
-      </div>
+             </div>
+        </div>
+}
     </>
   );
 };

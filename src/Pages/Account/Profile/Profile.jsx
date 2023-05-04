@@ -19,8 +19,8 @@ console.log(user);
     <div>
 
             <div className="card card-side bg-base-100 shadow-xl border">
-              <figure><img src={user.photoURL} alt="Movie"/></figure>
-              <div className="card-body">
+              <figure className='lg:w-4/12 bg-green-400'><img src={user.photoURL} alt="Movie"/></figure>
+              <div className="card-body lg:w-6/12">
                 <h2 className='text-xl font-bold  mt-2'> {user.displayName} </h2> 
                 <h2 className='text-xl '>  {user.email} </h2> 
                 <p>

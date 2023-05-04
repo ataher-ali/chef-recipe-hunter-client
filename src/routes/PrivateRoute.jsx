@@ -7,7 +7,7 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
     console.log('user in private route', user);
     if(loading){
-        return <Spinner animation="border" variant="primary" />
+        return <progress className="progress w-56"></progress>
     }
 
     if(user){
