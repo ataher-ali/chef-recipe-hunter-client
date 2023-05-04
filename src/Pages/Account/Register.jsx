@@ -53,7 +53,7 @@ const Register = () => {
                 event.target.reset();
                 setSuccess('User has been created successfully');
                 
-                updateUserData(result.user, name);
+                updateUserData(result.user, name,PURL);
             })
             .catch(error => {
                 console.error(error.message.slice(9));
@@ -61,7 +61,7 @@ const Register = () => {
             })
 
             const updateUserData = (user, name,PURL) => {
-              updateProfile(auth.currentUser, {
+          return    updateProfile(auth.currentUser, {
                 displayName: name, photoURL:PURL
               }).then(() => {
                 // Profile updated!

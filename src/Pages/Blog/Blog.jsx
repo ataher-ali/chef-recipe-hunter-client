@@ -16,7 +16,7 @@ const Blog = () => {
            
             <div  className='lg:mx-40'>
                     {
-                        data.map(blog=><Blog_Card element={blog} ></Blog_Card>)
+                        data.map((blog,i)=><Blog_Card key={i} element={blog} ></Blog_Card>)
                     }
             </div>
         </div>

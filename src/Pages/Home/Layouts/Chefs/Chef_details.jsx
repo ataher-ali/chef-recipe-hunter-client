@@ -29,7 +29,7 @@ const Chef_details = () => {
                 
                 <div className='lg:mx-5 grid lg:grid-cols-2 lg: gap-5 mt-2'>
                     {
-                        recipes.map(f=> <Food_Cart key={f.id} element={f}></Food_Cart> )
+                        recipes.map(f=> <Food_Cart key={f._id} element={f}></Food_Cart> )
                     }
                 </div>
                 </div>

@@ -25,7 +25,6 @@ console.log(user);
                 <h2 className='text-xl '>  {user.email} </h2> 
                 <p>
                     <span> uid : {user.uid}</span> <br />
-                    <span> Photo URL: {user.photoURL}</span>
                 </p>
                 <div className="card-actions justify-end">
 

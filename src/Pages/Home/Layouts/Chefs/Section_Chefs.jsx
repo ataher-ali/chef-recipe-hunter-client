@@ -23,7 +23,7 @@ const Section_Chefs = () => {
                 {
                     data.map(f=> 
                         
-                        <Chefs key={f.id} element={f}></Chefs>
+                        <Chefs key={f._id} element={f}></Chefs>
             
                         )
                 }
