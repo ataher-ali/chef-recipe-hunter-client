@@ -1,20 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  
 
-  const { user ,createUserWithPass , signInWithGoogle,signInWithGithub} = useContext(AuthContext);
+  const { signInWithGoogle,signInWithGithub,signIn} = useContext(AuthContext);
 
-    const formData =(event)=>{
-        event.preventDefault(); 
+
+    const handleLogin =(event)=>{
+
+      // 1. prevent page refresh
+      event.preventDefault(); 
+      setError('');
+      setSuccess('');
+
+      // 2. collect form data
         const email = event.target.email.value;
         const password = event.target.password.value;
-        console.log('email :', email);
-        console.log('password :',password);
+        // console.log('email :', email);
+        // console.log('password :',password);
 
-        event.target.reset();
+        signIn(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            // navigate(from, { replace: true })
+            
+            setSuccess('Login successfully');
+        })
+        .catch(error => {
+            console.log(error);
+            setError(error.message.slice(9));
+        })
+        
+       
+         event.target.reset();
     }
 
 
@@ -26,7 +50,7 @@ const Login = () => {
         <div className="flex justify-center mt-4">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-xl border">
             
-            <form onSubmit={formData} className="mx-10 mt-5 ">
+            <form onSubmit={handleLogin} className="mx-10 mt-5 ">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -73,6 +97,11 @@ const Login = () => {
                 </button>
               </div>
 
+              <div className="mb-4">
+              <p className='text-center  text-red-500'>{error}</p>
+              <p className='text-center  text-green-400'>{success}</p>
+              </div>
+         
           </div>
         </div>
       </div>

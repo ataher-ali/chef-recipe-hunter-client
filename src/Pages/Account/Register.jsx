@@ -1,16 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
+import app from "../../Firebase/firebase.init";
+
+
+
+const auth = getAuth(app);
 
 const Register = () => {
-  const { user ,createUserWithPass , signInWithGoogle,signInWithGithub} = useContext(AuthContext);
-
-  console.log(user);
-
-  const formData = (event) => {
+  const { user , signInWithGoogle,signInWithGithub} = useContext(AuthContext);
+  
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  
+  const handleSubmit = (event) => {
+    // 1. prevent page refresh
     event.preventDefault();
+     setSuccess('');
+    setError('');
+
+    // 2. collect form data
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
@@ -20,8 +32,46 @@ const Register = () => {
     console.log("password :", password);
     console.log("Photo URL :", PhotoURL);
     
-    createUserWithPass ()
-    event.target.reset();
+     // validate
+     if (!/(?=.*[A-Z])/.test(password)) {
+      setError('Please add at least one uppercase');
+      return;
+  }
+  else if (!/(?=.*[0-9].*[0-9])/.test(password)) {
+      setError('Please add at least two numbers');
+      return
+  }
+  else if (password.length < 6) {
+      setError('Please add at least 6 characters in your password')
+      return;
+  }
+        // 3. create user in fb
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                setError('');
+                event.target.reset();
+                setSuccess('User has been created successfully');
+                
+                updateUserData(result.user, name);
+            })
+            .catch(error => {
+                console.error(error.message.slice(9));
+                setError(error.message);
+            })
+
+            const updateUserData = (user, name) => {
+              updateProfile(user, {
+                  displayName: name
+              })
+                  .then(() => {
+                      console.log('user name updated')
+                  })
+                  .catch(error => {
+                      setError(error.message.slice(9));
+                  })
+          }
   };
 
 
@@ -34,7 +84,7 @@ const Register = () => {
       <h2 className="text-2xl text-center text-bold">Register</h2>
         <div className="flex justify-center mt-2">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-xl border">
-            <form onSubmit={formData} className="mx-10 mt-5  ">
+            <form onSubmit={handleSubmit} className="mx-10 mt-5  ">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -100,6 +150,10 @@ const Register = () => {
                 <button onClick={signInWithGithub} className=" bg-gray-100 p-1 rounded-full hover:bg-gray-300 mx-2">
                   <AiFillGithub size={40}></AiFillGithub>
                 </button>
+              </div>
+              <div className="my-3">
+              <p className='text-center  text-red-500'>{error}</p>
+              <p className='text-center  text-green-400'>{success}</p>
               </div>
           </div>
         </div>
