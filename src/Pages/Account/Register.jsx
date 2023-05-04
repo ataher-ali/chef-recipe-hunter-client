@@ -1,16 +1,15 @@
 import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
 import app from "../../Firebase/firebase.init";
 
 
 
-const auth = getAuth(app);
-
 const Register = () => {
+  const auth = getAuth(app);
   const {user,signInWithGoogle,signInWithGithub,logOut} = useContext(AuthContext);
   
   const [error, setError] = useState('');
@@ -172,6 +171,7 @@ const Register = () => {
           </div>
         </div>
              </div>
+            
         </div>
 }
     </>

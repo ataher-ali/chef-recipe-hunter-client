@@ -40,10 +40,10 @@ const Chef_details = () => {
 
                 </div>
 
-            <div className='flex justify-center my-4'>
+            
 
-                  <button className='btn btn-outline m-2' onClick={() => navigate(-1)}>Back</button>  
-            </div>
+                  <button className='btn btn-outline m-2 mx-auto block' onClick={() => navigate(-1)}>Back</button>  
+            
         </div>
     );
 };

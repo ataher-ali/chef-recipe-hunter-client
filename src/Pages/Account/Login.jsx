@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
+  let navigate = useNavigate();
+
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
  
@@ -118,7 +120,9 @@ const Login = () => {
           </div>
         </div>
       </div>
-        </div>
+      <button className='btn btn-outline m-2 mb-5 mx-auto block' onClick={() => navigate(-1)}>Back</button>  
+            
+      </div>
       }
     </>
   );

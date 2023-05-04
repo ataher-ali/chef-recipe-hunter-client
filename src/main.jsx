@@ -18,6 +18,7 @@ import Chef_details from './Pages/Home/Layouts/Chefs/Chef_details.jsx';
 import Foods from './Pages/Home/Layouts/Foods/Foods.jsx';
 import Section_Chefs from './Pages/Home/Layouts/Chefs/Section_Chefs.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
+import Food_Info from './Pages/Home/Layouts/Foods/Food_Info.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,12 @@ const router = createBrowserRouter([
         path:'/foods',
         element: <Foods></Foods>,
         loader:({params})=>fetch(`https://a10-server-puce.vercel.app/foods/`)
+      },
+      {
+        path:'/food_info/:id',
+        element: <PrivateRoute> <Food_Info></Food_Info> </PrivateRoute>,
+        loader:({params})=>fetch(`https://a10-server-puce.vercel.app/foods/${params.id}`)
+        
       },
       {
         path:'/profile',
