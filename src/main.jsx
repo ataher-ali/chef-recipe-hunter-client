@@ -17,6 +17,7 @@ import AuthProvider from './Provider/AuthProvider.jsx';
 import Chef_details from './Pages/Home/Layouts/Chefs/Chef_details.jsx';
 import Foods from './Pages/Home/Layouts/Foods/Foods.jsx';
 import Section_Chefs from './Pages/Home/Layouts/Chefs/Section_Chefs.jsx';
+import PrivateRoute from './routes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/Chef_Details/:id',
-        element: <Chef_details></Chef_details>,
+        element: <PrivateRoute> <Chef_details></Chef_details> </PrivateRoute>,
         loader:({params})=>fetch(`https://a10-server-puce.vercel.app/chefs/${params.id}`)
         
       },
