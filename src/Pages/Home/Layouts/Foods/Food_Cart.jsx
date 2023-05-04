@@ -1,4 +1,8 @@
 import React from "react";
+import toast, { Toaster } from 'react-hot-toast';
+import { Link } from "react-router-dom";
+
+const AddFavorite = () => toast.success('Item Add to Favorite.');
 
 const Food_Cart = (params) => {
   const { title, image,details } = params.element;
@@ -16,7 +20,14 @@ const Food_Cart = (params) => {
           <h2 className="card-title">{title}</h2>
           <p>{details}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-outline">Details</button>
+          <div className="flex ">
+          <button onClick={AddFavorite} className="btn btn-outline mx-2">Add Favorite </button>
+          <Toaster/>
+          <Link to={`/foods#${title}`}>
+          <button className="btn btn-outline mr-2"  >Info</button>
+          </Link>
+         
+          </div>
           </div>
         </div>
       </div>

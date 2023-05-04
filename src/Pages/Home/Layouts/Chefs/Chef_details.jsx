@@ -22,12 +22,12 @@ const Chef_details = () => {
                 <h1 className='text-center text-xl text-bold m-3'> <span className='text-red-400'>💙 Total Like : </span>  {data.likes}</h1>
 
   
-  <div className='flex justify-center '>
+  <div className='lg:flex lg:justify-center '>
 
                 <div className='bg-base-300 p-5 rounded-xl lg:py-10 border  lg:w-fit'>
                 <h2 className='text-4xl font-bold text-center mb-10' >F<span>🍩🍔</span>D Recipes </h2>
                 
-                <div className='lg:mx-5 grid grid-cols-2 gap-5 mt-2'>
+                <div className='lg:mx-5 grid lg:grid-cols-2 lg: gap-5 mt-2'>
                     {
                         recipes.map(f=> <Food_Cart key={f.id} element={f}></Food_Cart> )
                     }

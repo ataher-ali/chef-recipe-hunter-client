@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/foods',
-        element: <Foods></Foods>,
+        element:<PrivateRoute><Foods></Foods></PrivateRoute> ,
         loader:({params})=>fetch(`https://a10-server-puce.vercel.app/foods/`)
       },
       {

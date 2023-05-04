@@ -71,7 +71,7 @@ const Register = () => {
                 // ...
               });
           }
-          updateUserData()
+          updateUserData(name,PURL)
             
   };
 
