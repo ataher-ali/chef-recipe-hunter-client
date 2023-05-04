@@ -20,6 +20,7 @@ import Section_Chefs from './Pages/Home/Layouts/Chefs/Section_Chefs.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
 import Food_Info from './Pages/Home/Layouts/Foods/Food_Info.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
+import Password from './Pages/Account/Profile/Password.jsx';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path:'/profile',
         element: <Profile></Profile>
+      },
+      {
+        path:'/profile/password_reset',
+        element: <Password></Password>
       },
       {
         path:'/login',

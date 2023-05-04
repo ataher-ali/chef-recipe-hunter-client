@@ -54,6 +54,7 @@ const Login = () => {
     }
 
 
+
   return (
     <>
 
@@ -90,9 +91,9 @@ const Login = () => {
                   required
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    
-                  </a>
+                  
+                  
+                  <Link to='/profile/password_reset'>Forgat Password</Link>
 
                   <Link to='/register' className="label-text-alt link link-hover">Register</Link>
                 </label>
