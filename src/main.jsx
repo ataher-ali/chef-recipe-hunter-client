@@ -19,6 +19,7 @@ import Foods from './Pages/Home/Layouts/Foods/Foods.jsx';
 import Section_Chefs from './Pages/Home/Layouts/Chefs/Section_Chefs.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
 import Food_Info from './Pages/Home/Layouts/Foods/Food_Info.jsx';
+import Contact from './Pages/Contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element: <Register></Register>
+      },
+      {
+        path:'/Contact',
+        element: <Contact></Contact>
       },
     ]
   },

@@ -3,10 +3,10 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Profile = () => {
-    const { user,logOut ,photoURL } = useContext(AuthContext);
+    const { user,logOut ,} = useContext(AuthContext);
 
+    // const {providerId,screenName}=user.reloadUserInfo
     let navigate = useNavigate();
-
 console.log(user);
 
     return (
@@ -18,13 +18,14 @@ console.log(user);
     user? 
     <div>
 
-            <div className="card card-side bg-base-100 shadow-xl border">
+            <div className="card card-side bg-base-100 shadow-xl border my-10">
               <figure className='lg:w-4/12 bg-green-400'><img src={user.photoURL} alt="Movie"/></figure>
               <div className="card-body lg:w-6/12">
                 <h2 className='text-xl font-bold  mt-2'> {user.displayName} </h2> 
                 <h2 className='text-xl '>  {user.email} </h2> 
                 <p>
-                    <span> User : {user.displayName}</span>
+                    <span> uid : {user.uid}</span> <br />
+                    <span> Photo URL: {user.photoURL}</span>
                 </p>
                 <div className="card-actions justify-end">
 
