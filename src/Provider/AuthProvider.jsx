@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
   //Sign In With Google
   const signInWithGoogle = () => {
     console.log("google");
-    signInWithPopup(auth, GoogleProvider)
+ return   signInWithPopup(auth, GoogleProvider)
     .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
@@ -44,7 +44,7 @@ const AuthProvider = ({ children }) => {
   //Sign In With Github
   const signInWithGithub = () => {
     console.log("github");
-    signInWithPopup(auth, GithubProvider)
+   return signInWithPopup(auth, GithubProvider)
       
 };
 //signIn

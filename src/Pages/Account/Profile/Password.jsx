@@ -36,35 +36,25 @@ const Password = () => {
     }
 
     return (
-        <div className='lg:mx-36'>
-                <div className='lg:mx-40 my-20 mx-10 '>
-                <form onSubmit={handleLogin} className="mx-10 mt-5 px-40">
+        <div >
+                <div className='flex my-20 justify-center'>
+                <form onSubmit={handleLogin} className="mx-10 mt-5 px-40 flex gap-2 items-center flex-col">
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
                 <input
                   type="email"
                   placeholder="email"
-                  className="input input-bordered"
+                  className="input input-bordered w-max"
                   name="email"
                   required
                 />
               </div>
-              <div className="form-control">
-                
-                <label className="label">
-                  
-                  
 
-                  <Link to='/register' className="label-text-alt link link-hover">Register an Account </Link>
-                </label>
-              </div>
               <div className="form-control mt-0">
-                <button className="btn btn-outline">Reset Password </button>
+                <button className="btn btn-outline w-52">Reset Password </button>
                 <Toaster/>
               </div>
               
+                  <Link to='/register' className="label-text-alt link link-hover">Register an Account </Link>
             </form>
                 </div>
         </div>

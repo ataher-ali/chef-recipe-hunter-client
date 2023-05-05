@@ -16,17 +16,17 @@ console.log(user);
         <div className='lg:mx-40 my-5'>
 {
     user? 
-    <div>
+    <div className='px-5'>
 
-            <div className="card card-side bg-base-100 shadow-xl border my-10">
-              <figure className='lg:w-4/12 bg-green-400'><img src={user.photoURL} alt="Movie"/></figure>
+            <div className="card pb-10  bg-base-100 shadow-xl border my-10">
+              <figure className=' bg-green-400 h-56 flex justify-center'><img src={user.photoURL} alt="Movie"/></figure>
               <div className="card-body lg:w-6/12">
                 <h2 className='text-xl font-bold  mt-2'> {user.displayName} </h2> 
                 <h2 className='text-xl '>  {user.email} </h2> 
                 <p>
                     <span> uid : {user.uid}</span> <br />
                 </p>
-                <div className="card-actions justify-end">
+                <div className="card-footer my-5 flex justify-center">
 
 
                         <div>

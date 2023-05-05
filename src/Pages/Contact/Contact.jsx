@@ -21,7 +21,7 @@ const Contact = () => {
                                 <label className="label">
                                 <textarea className="textarea textarea-bordered w-80" placeholder="Message"></textarea>
                                 </label>
-
+                                <button className='btn btn-outline my-4 float-right'>Send</button>
                         </div>
                         </form>
                 </div>
