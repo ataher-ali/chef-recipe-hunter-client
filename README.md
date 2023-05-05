@@ -2,7 +2,7 @@
 b7a10-chef-recipe-hunter-client-side-ataher-ali created by GitHub Classroom
 
 ## Live Website 
-Web Site Live Link   👉 [https://64548c1f1f4781595f35291c--snazzy-tiramisu-2a31f9.netlify.app/](https://64548c1f1f4781595f35291c--snazzy-tiramisu-2a31f9.netlify.app/)
+Web Site Live Link   👉 [https://ph-b7-a-10.netlify.app/](https://ph-b7-a-10.netlify.app/)
 
 ##
 ## Api 
