@@ -7,6 +7,7 @@ import {
   onAuthStateChanged,
   signOut,
   signInWithEmailAndPassword,
+  signInWithRedirect,
 } from "firebase/auth";
 import app from "../Firebase/firebase.init";
 
@@ -14,7 +15,7 @@ export const AuthContext = createContext(null);
 
 const auth = getAuth(app);
 const GoogleProvider = new GoogleAuthProvider();
-const GithubProvider = new GithubAuthProvider();
+const provider = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
 
@@ -42,10 +43,30 @@ const AuthProvider = ({ children }) => {
   };
 
   //Sign In With Github
-  const signInWithGithub = () => {
+  const WithGithub = () => {
     console.log("github");
-   return signInWithPopup(auth, GithubProvider)
-      
+  return  signInWithPopup(auth, provider)
+  .then((result) => {
+    // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+    const credential = GithubAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+
+    // The signed-in user info.
+    const user = result.user;
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+    setUser(user)
+    console.log(user);
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GithubAuthProvider.credentialFromError(error);
+    // ...
+  });
 };
 //signIn
 
@@ -61,7 +82,7 @@ const signIn=(email, password)=>{
     setLoading(true);
     signOut(auth)
     .then(() => {
-        // Sign-out successful.
+        setUser()
       }).catch((error) => {
         // An error happened.
       });
@@ -87,7 +108,7 @@ const signIn=(email, password)=>{
   const AuthInfo = {
     user,
     signInWithGoogle,
-    signInWithGithub,
+    WithGithub,
     signIn,
     logOut,
 

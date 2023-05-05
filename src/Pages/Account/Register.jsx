@@ -10,7 +10,7 @@ import app from "../../Firebase/firebase.init";
 
 const Register = () => {
   const auth = getAuth(app);
-  const {user,signInWithGoogle,signInWithGithub,logOut} = useContext(AuthContext);
+  const {user,signInWithGoogle,WithGithub,logOut} = useContext(AuthContext);
   
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -76,13 +76,13 @@ const Register = () => {
   };
 
   const google =()=>{
-    logOut()
+   
     signInWithGoogle()
     
   }
   const github =()=>{
-    logOut()
-    signInWithGithub()
+    
+    WithGithub()
   }
 
 

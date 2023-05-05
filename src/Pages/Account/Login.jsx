@@ -10,7 +10,7 @@ const Login = () => {
   const [success, setSuccess] = useState('');
  
 
-  const {user, signInWithGoogle,signInWithGithub,signIn,logOut} = useContext(AuthContext);
+  const {user, signInWithGoogle,WithGithub,signIn,logOut} = useContext(AuthContext);
 
 
     const handleLogin =(event)=>{
@@ -44,13 +44,11 @@ const Login = () => {
     }
 
     const google =()=>{
-      logOut()
       signInWithGoogle()
       
     }
     const github =()=>{
-      logOut()
-      signInWithGithub()
+      WithGithub()
     }
 
 
