@@ -5,9 +5,9 @@ const Chefs = (props) => {
     const {name,picture,_id,likes,food_region}=props.element
     // console.log(_id);
     return (
-        <>
+        <div className='py-2 '>
             
-            <div className="card card-compact w-96 bg-base-100 shadow-xl border m-4 ">
+            <div className="card card-compact w-80 bg-base-100 shadow-xl border ">
         <figure className="h-52 w-full bg-emerald-200">
           <img className="h-fit w-full"
             src={picture}
@@ -29,7 +29,7 @@ const Chefs = (props) => {
           </div>
         </div>
       </div>
-        </>
+        </div>
     );
 };
 

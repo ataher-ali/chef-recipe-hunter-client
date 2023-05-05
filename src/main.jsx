@@ -21,6 +21,7 @@ import PrivateRoute from './routes/PrivateRoute.jsx';
 import Food_Info from './Pages/Home/Layouts/Foods/Food_Info.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import Password from './Pages/Account/Profile/Password.jsx';
+import Info from './Pages/Info/Info.jsx';
 
 const router = createBrowserRouter([
   {
@@ -84,6 +85,10 @@ const router = createBrowserRouter([
       {
         path:'/Contact',
         element: <Contact></Contact>
+      },
+      {
+        path:'/info',
+        element: <Info></Info>
       },
     ]
   },

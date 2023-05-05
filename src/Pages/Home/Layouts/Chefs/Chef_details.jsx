@@ -8,7 +8,7 @@ const Chef_details = () => {
 
     const recipes = data.recipes
     return (
-        <div>
+        <div className='pl-1'>
             <div className='flex justify-center'>
             <img className='w-4/12 rounded shadow border p-1 m-4' src={data.picture} alt="" />
             </div>
@@ -22,12 +22,12 @@ const Chef_details = () => {
                 <h1 className='text-center text-xl text-bold m-3'> <span className='text-red-400'>💙 Total Like : </span>  {data.likes}</h1>
 
   
-  <div className='lg:flex lg:justify-center '>
 
-                <div className='bg-base-300 p-5 rounded-xl lg:py-10 border  lg:w-fit'>
+                <div className='flex justify-center flex-col '>
                 <h2 className='text-4xl font-bold text-center mb-10' >F<span>🍩🍔</span>D Recipes </h2>
+  <div className='lg:flex lg:justify-center mx-auto block'>
                 
-                <div className='lg:mx-5 grid lg:grid-cols-2 lg: gap-5 mt-2'>
+                <div className='lg:mx-5 grid lg:grid-cols-2 lg: gap-2 mt-2'>
                     {
                         recipes.map(f=> <Food_Cart key={f._id} element={f}></Food_Cart> )
                     }

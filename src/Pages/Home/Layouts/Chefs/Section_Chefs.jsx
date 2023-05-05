@@ -14,12 +14,12 @@ const Section_Chefs = () => {
 
     return (
         <>
-            <div className='lg:mx-28 px-4 '>
+            <div className='lg:mx-28  '>
 
             <h1 className='text-center text-5xl text-bold my-5'> 🍩ur Chefs </h1>
             <h2 className='text-center mb-5'> Total {data.length} country's chefs we have  </h2>
-                
-                <div className='lg:grid lg:grid-cols-3 lg:gap-4 mx-4'>
+                <div className="flex justify-center">
+                <div className='lg:grid lg:grid-cols-3 lg:gap-4 mx-1'>
                 {
                     data.map(f=> 
                         
@@ -27,6 +27,7 @@ const Section_Chefs = () => {
             
                         )
                 }
+                </div>
                 </div>
             </div>
         </>

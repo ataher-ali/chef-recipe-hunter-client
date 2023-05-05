@@ -9,7 +9,7 @@ const Food_Cart = (params) => {
   // console.log();
   return (
     <div>
-      <div className="card card-side bg-base-100 shadow-xl h-80 grid grid-cols-2 ">
+      <div className="card card-compact w-80 bg-base-100 shadow-xl border  ">
         <figure className="h-full">
           <img className="h-full "
             src={image}

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Food_Cart_2 = (params) => {
     const { title, image,details,id } = params.element;
   return (
-    <div className=" py-5" id={title} >
-      <div className="card card-compact w-96 bg-base-100 shadow-xl h-96">
+    <div className=" py-3" id={title} >
+      <div className="card card-compact w-80 bg-base-100 shadow-xl h-96">
         <figure className="">
           <img className="w-30"
             src={image}

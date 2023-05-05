@@ -93,7 +93,7 @@ const Login = () => {
                 <label className="label">
                   
                   
-                  <Link to='/profile/password_reset'>Forgat Password</Link>
+                  <Link to='/profile/password_reset' className="label-text-alt link link-hover">Forgat Password</Link>
 
                   <Link to='/register' className="label-text-alt link link-hover">Register</Link>
                 </label>

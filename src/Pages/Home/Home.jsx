@@ -10,7 +10,7 @@ const Home = () => {
 
     
   return (
-    <>
+    <div>
       <Main></Main>
     <br />
     <About></About>
@@ -22,7 +22,7 @@ const Home = () => {
     <Section_Food></Section_Food>
     <Contact></Contact>
        
-    </>
+    </div>
   );
 };
 
